@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f9f9f9;
+    /* color: azure; */
+
+}
+body::-webkit-scrollbar {
+    width: 5px;               /* ширина всей полосы прокрутки */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #3B3B98;        /* цвет зоны отслеживания */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: red;    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 0.2px solid #3B3B98;  /* отступ вокруг бегунка */
+}
+
+/* Header ning Kodi */
+.header {
+    height: 80px;
+    width: 90%;
+    margin: 30px 0;
+    border-radius: 3px;
+    background-color: #e6e6e6; /*  Headerning orqa fon rangi  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3B3B98;   /* Headerdagi logo ning rangi */
+}
+
+.cart {
+    display: flex;
+    background-color: azure;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+.cart p {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: #3B3B98;
+    
+}
+.cart i, p {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#root {
+    color: #E53935;
+}
+.box {
+    background-color: #f0f0f0;
+}
+.container {
+    display: flex;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+@media (min-width:990px){
+    #root {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        height: 500px;
+        overflow: auto;
+    }
+    .sidebar {
+        width: 25%;
+        margin-left: 20px;
+        padding: 15px;
+        text-align: center;
+        background-color: #eee;
+        border-radius: 8px;
+    }
+    .img-box {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  /*  #root::-webkit-scrollbar {
+        width: 5px;               /* ширина всей полосы прокрутки */
+   /*   }
+      
+      #root::-webkit-scrollbar-track {
+        background: aqua;        /* цвет зоны отслеживания */
+   /*   }
+      
+      #root::-webkit-scrollbar-thumb {
+        background-color: blue;    /* цвет бегунка */
+   /*     border-radius: 20px;       /* округлось бегунка */
+    /*    border: 0.2px solid aqua;  /* отступ вокруг бегунка */
+      /*}*/
+}
+@media (max-width:989px) and (min-width:656px){
+    #root {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        height: 500px;
+        overflow: auto;
+    }
+    .sidebar {
+        width: 50%;
+        margin-left: 15px;
+        padding: 10px;
+        text-align: center;
+        background-color: #eee;
+        border-radius: 8px;
+        
+    }
+    
+}
+@media (max-width:655px){
+    #root {
+        width: 50%;
+        height: 500px;
+        overflow: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+        /* scrollbar-width: thin;
+        scrollbar-color: blue orange; */
+    }
+      
+    .sidebar {
+        width: 50%;
+        margin-left: 10px;
+        padding: 8px;
+        text-align: center;
+        background-color: #eee;
+        border-radius: 4px;
+    }
+    /* .box {
+        height: 180px;
+    } */
+    
+    .cart-item h2 {
+        font-size: 12px;
+
+    }
+}
+.head {
+    background-color:#3B3B98;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: azure;
+    display: flex;
+    align-items: center;
+    border: 8px ridge #3B3B98;
+
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.foot h3 {
+    font-size: 15px;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #3B3B98;
+    border-radius: 5px;
+    padding: 15px;
+    /* border-radius: 100% 0% 100% 0% / 7% 93% 7% 93% ; */
+    transition: 0.8s ease;
+}
+.box:hover {
+    border-radius: 93% 7% 93% 7% / 0% 100% 0% 100% ;
+}
+.images {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    
+}
+.bottom p {
+    font-size: 15px;
+}
+h2 {
+    font-size: 20px;
+    color: #3B3B98;
+}
+button {
+    width: 100%;
+    border: none;
+    position: relative;
+    border-radius: 100% 0% 100% 0% / 7% 93% 7% 93% ;
+    background-color: #3B3B98;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+    transition: 0.8s ease;
+    /* border: 9px inset #999B98; */
+}
+button:hover {
+    background-color: rgba(0, 0, 128, 0.832);
+    border-radius: 93% 7% 93% 7% / 0% 100% 0% 100% ;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: azure;
+    border-bottom: 1px solid #aaa;
+    /* margin: 10px 10px; */
+    border-radius: 3px;
+}
+.cart-item p {
+    font-size: 10px;
+    font-weight: 600
+}
+.row-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg {
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash {
+    font-size: 15px;
+}
+.fa-trash:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+
+.images {
+    border: 2px ridge cornsilk;
+    
+    background: white;
+    transition: 0.9s ease;
+}
+.box:hover .images{
+    border-radius: 90% 10% 90% 10% / 0% 100% 0% 100% ;
+    filter: drop-shadow(0 0 10px #3B3B98);
+}
